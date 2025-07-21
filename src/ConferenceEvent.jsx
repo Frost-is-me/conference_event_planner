@@ -55,7 +55,7 @@ const ConferenceEvent = () => {
         const items = [];
         venueItems.forEach((item) => {
             if(item.quantity > 0) {
-                items.push([{...item, type:"venue"}])
+                items.push({...item, type:"venue"})
             }
         })
         avItems.forEach((item) => {
@@ -258,7 +258,7 @@ const ConferenceEvent = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <div className="total_cost">Total Cost: {avTotalCost}</div>
+                                <div className="total_cost">Total Cost: ${avTotalCost}</div>
 
                             </div>
 
@@ -286,13 +286,13 @@ const ConferenceEvent = () => {
                                                 checked={item.selected}
                                                 onChange={() => handleMealSelection(index)}
                                                 />
-                                                <label htmlFor={`meal_${index}`}></label>
+                                                <label htmlFor={`meal_${index}`}> {item.name} </label>
                                             </div>
                                             <div className="meal_cost">${item.cost}</div>
                                         </div>
                                     ))}
                                 </div>
-                                <div className="total_cost">Total Cost: {mealsTotalCost}</div>
+                                <div className="total_cost">Total Cost: ${mealsTotalCost}</div>
 
 
                             </div>
